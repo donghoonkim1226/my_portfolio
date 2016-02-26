@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My personal portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donghoonkim1226/my_portfolio.git"
+  },
+  "author": "Dong Hoon Kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/donghoonkim1226/my_portfolio/issues"
+  },
+  "homepage": "https://github.com/donghoonkim1226/my_portfolio#readme"
+}
