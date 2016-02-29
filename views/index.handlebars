@@ -1,54 +1,137 @@
-<!-- Nav bar -->
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-				  <span class="sr-only">Toggle navigation</span>
-				  <span class="icon-bar"></span>
-				  <span class="icon-bar"></span>
-				  <span class="icon-bar"></span>
-				</button>
-			</div>
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right">
-					<li>
-						<a href="views/about.html">About Me</a>
-					</li>
-					<li>
-						<a href="views/work.html">Professional Projects</a>
-					</li>
-					<li>
-						<a href="views/about.html">Personal Projects</a>
-					</li>
-					<li>
-						<a href="/contact">Contact</a>
-					</li>
-					<li class="dropdown">
-				    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Social Media <b class="caret"></b></a>
-				    <ul class="dropdown-menu">
-			        <li>
-		            <a href="https://github.com/donghoonkim1226" target="blank">
-                  <img class="social-icon" src="static/images/github_icon.png"> - Github
-                </a>
-			        </li>
-			        <li>
-			          <a href="https://www.linkedin.com/in/dong-hoon-kim-514586108" target="blank">
-                  <img class="social-icon" src="static/images/linkedin_icon.png"> - Linkedin
-                </a>
-			        </li>
-			        <li>
-                <a href="https://www.facebook.com/dong.h.kim.980" target="blank">
-                  <img class="social-icon" src="static/images/facebook_icon.png"> - Facebook
-                </a>
-			        </li>
-			        <li>
-		            <a href="https://twitter.com/donghoonnn" target="blank">
-                  <img class="social-icon" src="static/images/twitter_icon.png"> - Twitter
-                </a>
-			        </li>
-				    </ul>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+<!-- Navigation -->
+{{>navbar}}
+
+<div class="container">
+
+  <div class="row">
+    <div class="box">
+      <div class="col-lg-12 text-center">
+        <div id="carousel-example-generic" class="carousel slide">
+          <!-- Indicators -->
+          <ol class="carousel-indicators hidden-xs">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <!-- <li data-target="#carousel-example-generic" data-slide-to="2"></li> -->
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img class="img-responsive img-full img-carousel" src="static/images/slide-1.jpg" alt="">
+            </div>
+            <div class="item">
+              <img class="img-responsive img-full img-carousel" src="static/images/slide-2.jpg" alt="">
+            </div>
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+            <span class="icon-prev"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+            <span class="icon-next"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Intro -->
+  <div class="row">
+    <div class="box">
+      <div class="col-lg-12">
+        <hr>
+        <h2 class="intro-text text-center">
+          <strong>Dong Hoon Kim - Full Stack Developer</strong>
+        </h2>
+        <hr>
+        <img class="img-responsive img-border img-left img-headshot" src="static/images/headshot.jpg" alt="">
+        <hr class="visible-xs">
+        <p>Ever since embarking on my journey in development, it has opened my eyes to the vast beauty, necessity and power of code. The new skill sets I have been learning has now flourished into skills that I use to fuel my passion for code. </p>
+        <p>I have a diverse set of skills that allows me to efficently work both client side and server side. My current skills sets range from HTML5/CSS3, Bootstrap, Materialize, JavaScript, Responsive Design, jQuery, API/JSON, Node.js, Express, Angular.js, Lodash, RESTful API, Firebase, MySQL, Ajax, State Management, Active Record, Command Line, creation of Content Management Systems (CMS), Git and Trello.</p>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="list-inline intro-social-buttons social-media">
+            <li>
+              <a href="https://www.facebook.com/dong.h.kim.980" target="blank" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+            </li>
+            <li>
+              <a href="https://github.com/donghoonkim1226" target="blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/dong-hoon-kim-514586108" target="blank" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- My RCB Projects -->
+  <div class="row">
+    <div class="box">
+      <div class="col-lg-12">
+        <hr>
+        <h2 class="intro-text text-center">
+          <strong>RCB Projects</strong>
+        </h2>
+        <hr>
+      </div>
+      <div class="col-sm-4 text-center">
+        <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        <h3>Clicky game</h3>
+          <small>Languages - HTML, CSS, Javascript - create route</small>
+        </h3>
+      </div>
+      <div class="col-sm-4 text-center">
+        <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        <h3>Rock.Paper.Scissor</h3>
+          <small>Languages - HTML, CSS, Javascript - create route</small>
+        </h3>
+      </div>
+      <div class="col-sm-4 text-center">
+        <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        <h3>S.e.e.d.</h3>
+          <small>Languages - HTML, CSS, Javascript - create route</small>
+        </h3>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+  <!-- Professional Projects -->
+  <div class="row">
+    <div class="box">
+      <div class="col-lg-12">
+        <hr>
+        <h2 class="intro-text text-center">
+          <strong>Professional Projects</strong>
+        </h2>
+        <hr>
+      </div>
+      <div class="col-sm-6 text-center">
+        <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        <h3>Nail Splash</h3>
+          <small>Languages - HTML, CSS, Javascript etc etc</small>
+        </h3>
+      </div>
+      <div class="col-sm-6 text-center">
+        <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        <h3>Cleaning Pro Services</h3>
+          <small>Languages - HTML, CSS, Javascript etc etc</small>
+        </h3>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+</div> <!-- /.container -->
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <p>Footer will go here</p>
+      </div>
+    </div>
+  </div>
+</footer>

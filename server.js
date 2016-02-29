@@ -78,6 +78,13 @@ ROUTES
 app.get('/', function(req, res) {
 	res.render('index');
 });
+//ABOUT ME PAGE
+app.get('/about_me', function(req, res) {
+	res.render('aboutme');
+});
+
+
+
 
 /*----------------------------------------
 DATABASE CONNECTION VIA SEQUELIZE
