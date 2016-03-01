@@ -8,8 +8,8 @@ var bcrypt            = require('bcryptjs');
 var bodyParser        = require('body-parser');
 var app               = express();
 
-var PORT = process.env.PORT || 3000;
-var sequelize = new Sequelize('test', 'root');
+// var PORT = process.env.PORT || 3000;
+// var sequelize = new Sequelize('test', 'root');
 
 //SETS UP HANDLEBARs LAYOUTS
 app.engine('handlebars', expressHandlebars({defaultLayout: 'main'}));
