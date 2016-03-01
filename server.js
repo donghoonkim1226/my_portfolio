@@ -8,8 +8,18 @@ var bcrypt            = require('bcryptjs');
 var bodyParser        = require('body-parser');
 var app               = express();
 
-// var PORT = process.env.PORT || 3000;
-// var sequelize = new Sequelize('test', 'root');
+// ACCESS HEROKU DATABASE OR LOCAL DATABASE
+
+var PORT = process.env.PORT || 3000;
+if(process.env.NODE_ENV === 'production') {
+  // HEROKU DB
+var sequelize = new Sequelize(process.env.JAWSDB_URL);
+}
+else {
+  // LOCAL DB
+ var sequelize = new Sequelize('portfolio_contact', 'root');
+}
+
 
 //SETS UP HANDLEBARs LAYOUTS
 app.engine('handlebars', expressHandlebars({defaultLayout: 'main'}));
@@ -22,16 +32,6 @@ app.use(bodyParser.urlencoded({
 
 //ACCESS TO PUBLIC FOLDER
 app.use('/static', express.static('public'));
-
-// ACCESS HEROKU DATABASE OR LOCAL DATABASE
-if(process.env.NODE_ENV === 'production') {
-  // HEROKU DB
-var sequelize = new Sequelize(process.env.JAWSDB_URL);
-}
-else {
-  // LOCAL DB
- var sequelize = new Sequelize('portfolio_contact', 'root');
-}
 
 //CREATING SECRET FOR USER LOGIN
 // app.use(require('express-session')({
