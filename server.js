@@ -23,6 +23,16 @@ app.use(bodyParser.urlencoded({
 //ACCESS TO PUBLIC FOLDER
 app.use('/static', express.static('public'));
 
+// ACCESS HEROKU DATABASE OR LOCAL DATABASE
+if(process.env.NODE_ENV === 'production') {
+  // HEROKU DB
+var sequelize = new Sequelize(process.env.JAWSDB_URL);
+}
+else {
+  // LOCAL DB
+ var sequelize = new Sequelize('portfolio_contact', 'root');
+}
+
 //CREATING SECRET FOR USER LOGIN
 // app.use(require('express-session')({
 //     secret: 'mqCJYnXWUrrb8y8FzoKqcXm0GcMygqDd7seYntmg',
@@ -70,19 +80,56 @@ PASSPORT - AUTHENTICATION
 /*----------------------------------------
 MODEL
 ----------------------------------------*/
-
+// PORTFOLIO CONTACT ME DB
+var Contact = sequelize.define('contact',{
+    name: {
+      type: Sequelize.STRING,
+      allowNull: false,
+      validate: {
+      is: ["^[a-z]+$","i"]
+      }
+    },
+    email: {
+      type: Sequelize.STRING,
+      allowNull: false,
+      validate: {
+      is: ["^[a-z]+$","i"]
+      }
+    },
+    phonenumber: {
+      type: Sequelize.STRING,
+      allowNull: false,
+      validate: {
+      is: ["^[a-z]+$","i"]
+      }
+    },
+    message: {
+      type: Sequelize.STRING,
+      allowNull: false,
+      validate: {
+      is: ["^[a-z]+$","i"]
+      }
+    }
+  });
 /*----------------------------------------
 ROUTES
 ----------------------------------------*/
-//HOMEPAGE
+// HOMEPAGE ROUTE
 app.get('/', function(req, res) {
 	res.render('index');
 });
-//ABOUT ME PAGE
+// ABOUT ME ROUTE
 app.get('/about_me', function(req, res) {
 	res.render('aboutme');
 });
-
+// BLOG ROUTE
+app.get('/blog', function(req, res) {
+	res.render('blog');
+});
+// CONTACT ME ROUTE
+app.get('/contact', function(req, res) {
+	res.render('contact');
+});
 
 
 

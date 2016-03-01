@@ -10,25 +10,25 @@
       </h2>
       <hr>
       <p>Contact me etc etc.. put some information and best method of contact here... Lucas ipsum dolor sit amet c-3p0 mothma luke hutt vader ackbar ewok binks cade mace. Baba jango maul skywalker gamorrean. Solo endor lars fett antilles jade. Organa watto hutt kamino sidious kenobi ewok palpatine droid. Jade r2-d2 baba hutt grievous dagobah organa. Jar darth obi-wan anakin. Calrissian bespin skywalker owen bothan kit. Jinn palpatine antilles hutt. Lobot kamino kashyyyk organa wedge mara. Skywalker jinn qui-gon leia. Darth darth skywalker darth lobot padmé qui-gon. Kessel moff tatooine anakin solo jinn c-3po antilles organa.</p>
-      <form role="form">
+      <form role="form" method="POST" action="/contact_me" >
         <div class="row">
           <div class="form-group col-lg-4">
             <label>Name</label>
-            <input type="text" class="form-control">
+            <input placeholder="First & Last Name" type="text" class="form-control" name="name">
           </div>
           <div class="form-group col-lg-4">
             <label>Email Address</label>
-            <input type="email" class="form-control">
+            <input placeholder="email@email.com" type="email" class="form-control" name="email">
           </div>
           <div class="form-group col-lg-4">
             <label>Phone Number</label>
-            <input type="tel" class="form-control">
+            <input placeholder="000-000-0000" type="tel" class="form-control" name="phone">
           </div>
           <div class="clearfix"></div>
           <div class="col-lg-3"></div>
           <div class="form-group col-lg-6 form-message">
             <label>Message</label>
-            <textarea class="form-control" rows="6"></textarea>
+            <textarea class="form-control" rows="6" name="message"></textarea>
           </div>
           <div class="col-lg-3"></div>
           <div class="form-group col-lg-12 form-submit">
